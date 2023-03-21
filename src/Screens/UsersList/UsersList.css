@@ -52,7 +52,6 @@ td {
   text-align: center;
   border-bottom: 1px solid #ddd;
   height: 3vh;
-  width: 10vw;
 }
 
 th {
@@ -88,13 +87,33 @@ a {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.footer button:hover:enabled {
+.footer button:hover {
   background-color: white;
   color: #57b846;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
 }
 
-.footer button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+@media only screen and (max-width: 700px) {
+  .content table {
+    display: block;
+  }
+  .content table thead,
+  .content table tbody,
+  .content table th,
+  .content table td,
+  .content table tr {
+    display: block;
+  }
+
+  .content table th {
+    height: auto;
+  }
+
+  .content table td {
+    height: auto;
+    border: none;
+  }
+  .content table tr {
+    border-bottom: 2px solid #ddd;
+  }
 }

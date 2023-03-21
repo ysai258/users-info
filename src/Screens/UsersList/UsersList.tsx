@@ -3,7 +3,7 @@ import { USERS_ENDPOINT, USERS_LIMIT } from "../../Constants/constants";
 import UserType from "../../Types/User/User";
 import "./UsersList.css";
 
-const  UserList = ()=>{
+const UserList = () => {
   const [users, setUsers] = useState<UserType[]>([]);
   const [mainUsers, setMainUsers] = useState<UserType[]>([]);
 
@@ -48,7 +48,7 @@ const  UserList = ()=>{
           type="search"
           className="searchTerm"
           placeholder="Search Name"
-          onChange={(e)=>filterDataByName(e.target.value)}
+          onChange={(e) => filterDataByName(e.target.value)}
         />
       </div>
       <div className="content">
@@ -84,15 +84,15 @@ const  UserList = ()=>{
         </table>
       </div>
       <div className="footer">
-        <button onClick={handlePrevClick} disabled={startIndex === 0}>
-          Previous
-        </button>
-        <button onClick={handleNextClick} disabled={users.length < USERS_LIMIT}>
-          Next
-        </button>
+        {!(startIndex === 0) && (
+          <button onClick={handlePrevClick}>Previous</button>
+        )}
+        {!(users.length < USERS_LIMIT) && (
+          <button onClick={handleNextClick}>Next</button>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default UserList;
