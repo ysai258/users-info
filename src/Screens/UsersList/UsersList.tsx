@@ -45,9 +45,9 @@ const  UserList = ()=>{
       </div>
       <div className="search">
         <input
-          type="text"
+          type="search"
           className="searchTerm"
-          placeholder="Enter Name"
+          placeholder="Search Name"
           onChange={(e)=>filterDataByName(e.target.value)}
         />
       </div>
