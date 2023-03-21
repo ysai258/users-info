@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
   color: #555;
   min-height: 100vh;
+  overflow-x: auto;
   background-image: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
@@ -18,6 +19,7 @@
 
 .content {
   padding: 1vh;
+  margin: 10px;
   border-radius: 12px;
   overflow-x: auto;
   background-color: white;
@@ -94,26 +96,11 @@ a {
 }
 
 @media only screen and (max-width: 700px) {
-  .content table {
+  .content,.container {
     display: block;
   }
-  .content table thead,
-  .content table tbody,
-  .content table th,
-  .content table td,
-  .content table tr {
-    display: block;
-  }
-
-  .content table th {
-    height: auto;
-  }
-
-  .content table td {
-    height: auto;
-    border: none;
-  }
-  .content table tr {
-    border-bottom: 2px solid #ddd;
+  .header,.search{
+    display: flex;
+    justify-content: center;
   }
 }
