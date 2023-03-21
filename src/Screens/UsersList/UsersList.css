@@ -103,4 +103,8 @@ a {
     display: flex;
     justify-content: center;
   }
+  .searchTerm {
+    width: 100%;
+    margin: 10px;
+  }
 }
